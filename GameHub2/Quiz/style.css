@@ -1,0 +1,52 @@
+body{
+  background-image: url(bg6.jpg);
+  background-size: cover;
+}
+
+.question {
+  text-align: center;
+  font-size: 2em;
+}
+#qwe {
+  width: 170px;
+  padding: 10px;
+  border: 2px solid white;
+  margin: 0;
+  text-align: center;
+}
+
+.questionNumber {
+  text-align: center;
+  padding: 2em;
+  font-size: 1.5em;
+}
+
+.answers {
+  font-size: 1em;
+}
+
+.answers label {
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+
+.answers input {
+  margin-left: 46em;
+  vertical-align: middle;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.button {
+  text-align: center;
+}
+
+.answers button {
+  width: 5%;
+  padding: .5em;
+  margin: 2.5em;
+}
+
+.score {
+  text-align: center;
+}

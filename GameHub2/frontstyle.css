@@ -1,0 +1,33 @@
+body{
+	width: 100%;
+  height: 100vh;
+  margin: 0px;
+        /* background-image: url(bg8.jpg); */
+        /* background-size: cover; */
+		/* z-index: -1; /* Keep the background behind the content */ */
+    /* height: 20%; width: 20%; /* Using Glen Maddern's trick /via @mente */ */
+
+ 
+    /* transform: scale(5); */
+    /* transform-origin: top left; */
+    /* filter: blur(2px); */
+      }
+	  #div {
+  background: #111;
+  height: 100%;
+  width: 100%;
+background-image: url(pac3.jpg);
+  background-size: cover; 
+  position:relative;
+
+	  }
+	 #d {
+		  border:none;
+		  border-radius:20px;
+		  background: orange;
+		  width:50%;
+		  height:150px;
+  /*       background-image: url(bg8.jpg);
+  background-size: cover;
+filter :blur(0); */
+      }

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/gif" href="logo1.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+    <link rel="stylesheet" type="text/css" href="regstyle.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+	 <body class="slideInDown animated">
+
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html"><img src="logo1.png" width="30" height="30" class="d-inline-block align-top " style="margin-right: 10px; margin-left: 10px;" >
+      GAME HUB</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="  false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto ">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+     </ul>
+      <ul class="navbar-nav ml-auto">
+     <li class="nav-item active">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+     <li class="nav-item active">
+         <a class="nav-link" href="reg.html">Register</a>
+       </li>
+     </ul>
+     </div>
+     </nav><h2>   </h2>
+
+	<div class="title" ><h1>Register</h1></div>
+		<div class="c">
+			<!-- <div class="left"><img src="image.png" style="max-height:100%;max-width:100%;object-fit:cover;position:relative; "></div>
+				//<div class="right"> -->
+					<div class="formbox">
+					<form>
+					<p>EMAIL ID:</p>
+					<input type="text" id = "email" name=" " placeholder="  EMAILID"></br></br>
+					<p>USERNAME:</p>
+					<input type="text" id = "name" name=" " placeholder="  USERNAME"></br></br>
+					<p>PASSWORD:</p>
+					<input type="Password" id = "password" name="" placeholder="  PASSWORD">
+					</br>
+					</br>
+					</br>
+					<input type="button" name="Register" onclick="register()" value="REGISTER">
+					</form>
+				<!-- 	</div> -->
+				</div>
+			</div>
+<script >
+
+function register() {
+var email = document.getElementById("email").value
+var name = document.getElementById("name").value
+var password = document.getElementById("password").value
+var game1 = 0
+var game2 = 0
+var game3 = 0
+var game4 = 0
+  //localStorage.setItem(email, [name,password,game1,game2,game3,game4]);
+  // body...
+//document.getElementById("demo").innerHTML = localStorage.getItem(email);
+var okay = 1;
+for(let x=0;x<localStorage.length;x++)
+  {
+    const key = localStorage.key(x);
+if(key == email)
+    {okay =0;}}
+if(email && name && password && (email.charCodeAt(0) >= 65) && okay == 1)
+{ if(password.length<8 || password.lenght>16){alert("Enter atleast 8 letters and at max 16 letters");
+location.reload();
+return false;}
+  var temp = []
+  temp.push(name);
+  temp.push(password);
+  temp.push(game1);
+  temp.push(game2);
+  temp.push(game3);
+  temp.push(game4);
+  localStorage.setItem(email, temp);
+  localStorage.setItem("__LOGGEDIN__",0);
+  localStorage.setItem("__INDEX__",-1);//[name,password,game1,game2,game3,game4]);
+  alert("Successfully registered Please Login with the details you just entered to continue");
+
+//document.getElementById("demo").innerHTML = "cdsvfdggdsssssssf";
+window.location.href = "login.html";
+return false;
+  //window.close();
+}
+else
+{
+  alert("PLease enter valid info");
+  window.location.reload();
+}
+
+}
+</script>
+		</body>
+	 </html>
+
+<!--  -->
